@@ -1,0 +1,20 @@
+{
+  "title": "Ritratti nel Tempo",
+  "description": "Frammenti di storie umane impresse nella luce. Volti e sguardi che raccontano l'esperienza del lavoro manuale, la concentrazione creativa o la semplice gioia di un istante rubato al trascorrere del tempo.",
+  "cover": "old_artisan.png",
+  "meta": "RITRATTI",
+  "photos": {
+    "old_artisan.png": {
+      "title": "Il Maestro Intagliatore",
+      "caption": "Dettaglio dello sguardo e delle mani vissute di un artigiano intento a rifinire una scultura di legno nel suo laboratorio storico.",
+      "meta": "85mm • f/2.0 • 1/125s • ISO 400",
+      "aspectRatio": "landscape"
+    },
+    "young_woman.png": {
+      "title": "Luce d'Oro",
+      "caption": "Un ritratto estemporaneo che cattura la morbida atmosfera del tardo pomeriggio e la spontaneità di un sorriso all'aperto.",
+      "meta": "85mm • f/1.4 • 1/400s • ISO 100",
+      "aspectRatio": "landscape"
+    }
+  }
+}

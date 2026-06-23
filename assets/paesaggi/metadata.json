@@ -1,0 +1,20 @@
+{
+  "title": "Sussurri della Natura",
+  "description": "Un viaggio visivo attraverso la maestosità incontaminata del mondo naturale. Dalle cime silenziose avvolte dalla nebbia mattutina, alle scogliere impervie modellate dal mare durante tramonti infuocati.",
+  "cover": "misty_mountain.png",
+  "meta": "PAESAGGI",
+  "photos": {
+    "misty_mountain.png": {
+      "title": "Alba Silente",
+      "caption": "La nebbia mattutina avvolge le vette alpine mentre i primi raggi di sole penetrano le nuvole cariche di umidità.",
+      "meta": "24mm • f/8.0 • 1/250s • ISO 100",
+      "aspectRatio": "landscape"
+    },
+    "ocean_cliff.png": {
+      "title": "Forza Primordiale",
+      "caption": "Il moto ondoso si infrange sulle rocce bagnate durante un tramonto dai toni caldi e infuocati, catturato con tempo di posa lungo.",
+      "meta": "16mm • f/11 • 2.0s • ISO 100",
+      "aspectRatio": "landscape"
+    }
+  }
+}
