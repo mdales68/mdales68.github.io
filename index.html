@@ -1,134 +1,84 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Massimo Fotografia | Portfolio</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio fotografico di ritratti. Visualizza una galleria di ritratti in formato verticale con un carosello interattivo.">
+  <meta name="author" content="Fotografo Ritrattista">
+  <title>Ritratti | Portfolio Fotografico</title>
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ritratti | Portfolio Fotografico">
+  <meta property="og:description" content="Galleria di ritratti d'autore in formato verticale.">
+  <meta property="og:image" content="images/IMG001.jpg">
+
+  <!-- Link ai fogli di stile -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header / Navbar -->
-    <header class="site-header">
-        <div class="header-container">
-            <a href="#/" class="logo">
-                <span class="logo-main">MASSIMO</span>
-                <span class="logo-sub">FOTOGRAFIA</span>
-            </a>
-            <nav class="site-nav">
-                <a href="#/" class="nav-link active" id="nav-home">Portfolio</a>
-                <a href="#/about" class="nav-link" id="nav-about">Chi Sono</a>
-            </nav>
-        </div>
-    </header>
+  <!-- Intestazione -->
+  <header>
+    <h1>Ritratti</h1>
+    <p>Portfolio Fotografico</p>
+  </header>
 
-    <!-- Main Content Area -->
-    <main class="main-content">
-        
-        <!-- Home View: Hero & Album Grid -->
-        <section id="home-view" class="view active">
-            <div class="hero-section">
-                <h1 class="hero-title">Scolpire la Luce, Fermare il Tempo</h1>
-                <p class="hero-subtitle">Fotografie amatoriali che raccontano storie di paesaggi, geometrie urbane e volti.</p>
-                <div class="scroll-indicator">
-                    <span class="scroll-text">Esplora gli album</span>
-                    <span class="scroll-arrow">↓</span>
-                </div>
-            </div>
-            
-            <div class="albums-container">
-                <div class="section-header">
-                    <h2>I miei Album</h2>
-                    <div class="section-divider"></div>
-                </div>
-                <div class="albums-grid" id="albums-grid">
-                    <!-- Dynamic Albums will be rendered here -->
-                </div>
-            </div>
-        </section>
+  <!-- Area Principale con Carosello -->
+  <main>
+    <!-- Contenitore principale del carosello -->
+    <div class="carousel-container" id="my-carousel">
+      
+      <!-- Indicatore di caricamento (Spinner) -->
+      <div class="loader-container" id="loader-container">
+        <div class="loader"></div>
+      </div>
 
-        <!-- Album Detail View -->
-        <section id="album-view" class="view">
-            <div class="album-detail-header">
-                <a href="#/" class="back-button">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="19" y1="12" x2="5" y2="12"></line>
-                        <polyline points="12 19 5 12 12 5"></polyline>
-                    </svg>
-                    Torna agli Album
-                </a>
-                <h1 id="album-title" class="album-title">Nome Album</h1>
-                <p id="album-description" class="album-description">Descrizione dell'album...</p>
-            </div>
-            
-            <div class="photos-grid" id="photos-grid">
-                <!-- Dynamic Photos will be rendered here -->
-            </div>
-        </section>
+      <!-- Frecce di Navigazione -->
+      <button class="carousel-arrow arrow-left" id="arrow-left" aria-label="Foto precedente">
+        <svg viewBox="0 0 24 24">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
 
-        <!-- About View -->
-        <section id="about-view" class="view">
-            <div class="about-container">
-                <div class="about-image-wrapper">
-                    <img src="assets/old_artisan.png" alt="Massimo" class="about-image">
-                </div>
-                <div class="about-text">
-                    <h2>Dietro l'Obiettivo</h2>
-                    <p class="about-bio">Ciao, sono Massimo. La fotografia per me è una passione nata dal desiderio di catturare la bellezza silenziosa che ci circonda. Che si tratti di un picco montuoso avvolto dalla nebbia mattutina, delle linee geometriche di un edificio moderno o dell'intensità di uno sguardo, cerco di catturare l'anima del momento attraverso la luce.</p>
-                    <p class="about-bio">Questo spazio è la mia galleria personale, una raccolta di viaggi visivi divisi per temi. Spero che queste immagini possano trasmetterti le stesse emozioni che ho provato io al momento dello scatto.</p>
-                    <div class="contact-info">
-                        <h3>Contatti</h3>
-                        <p>Email: <a href="mailto:info@massimofotografia.it">info@massimofotografia.it</a></p>
-                        <p>Social: <a href="#/about">Instagram</a> | <a href="#/about">500px</a></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-    </main>
+      <button class="carousel-arrow arrow-right" id="arrow-right" aria-label="Prossima foto">
+        <svg viewBox="0 0 24 24">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="footer-content">
-            <p>&copy; 2026 Massimo Fotografia. Tutti i diritti riservati.</p>
-            <p class="footer-tagline">Realizzato con passione per la luce.</p>
-        </div>
-    </footer>
+      <!-- Viewport in cui appaiono le foto -->
+      <div class="carousel-viewport" id="carousel-viewport">
+        <!-- Le slide verranno inserite dinamicamente da JavaScript -->
+      </div>
 
-    <!-- Fullscreen Lightbox Modal -->
-    <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog">
-        <button class="lightbox-close" id="lightbox-close" aria-label="Chiudi galleria">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-        </button>
-        
-        <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Foto precedente">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="15 18 9 12 15 6"></polyline>
-            </svg>
-        </button>
-        
-        <div class="lightbox-content">
-            <img id="lightbox-image" src="" alt="">
-            <div id="lightbox-caption" class="lightbox-caption">Didascalia della foto</div>
-        </div>
-        
-        <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Foto successiva">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-        </button>
     </div>
 
-    <!-- Script File -->
-    <script src="data.js"></script>
-    <script src="app.js"></script>
+    <!-- Controlli del Carosello -->
+    <div class="carousel-controls">
+      <!-- Pallini di navigazione -->
+      <div class="carousel-dots" id="carousel-dots"></div>
+
+      <!-- Pulsanti e contatore aggiuntivi -->
+      <div class="control-buttons-container">
+        <!-- Pulsante Autoplay -->
+        <button class="autoplay-btn" id="autoplay-btn" aria-label="Avvia presentazione">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          Play
+        </button>
+
+        <!-- Contatore foto (es. 1 / 5) -->
+        <div class="image-counter" id="image-counter"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Piè di pagina -->
+  <footer>
+    <p>&copy; 2026. Tutti i diritti riservati. Pubblicato su <a href="https://github.com" target="_blank" rel="noopener">GitHub Pages</a>.</p>
+  </footer>
+
+  <!-- Script logic -->
+  <script src="script.js"></script>
 </body>
 </html>
